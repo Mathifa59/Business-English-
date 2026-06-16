@@ -1,0 +1,50 @@
+.hero {
+  padding-top: 72px;
+}
+
+.heroInner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 100px 24px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heroTitle {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-on-dark-muted);
+  line-height: 1.65;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.sectionSoft {
+  background: var(--color-bg-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

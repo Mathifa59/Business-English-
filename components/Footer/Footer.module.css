@@ -1,0 +1,136 @@
+.footer {
+  background: var(--color-bg-dark);
+}
+
+.top {
+  padding: 64px 0 48px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 48px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.logo {
+  font-family: var(--font-title), system-ui, sans-serif;
+  font-size: 1.3rem;
+}
+
+.logoAccent {
+  font-weight: 800;
+  color: var(--color-accent);
+}
+
+.logoLight {
+  font-weight: 400;
+  color: #E8EBF8;
+}
+
+.tagline {
+  font-size: 0.88rem;
+  color: var(--color-text-on-dark-muted);
+  line-height: 1.6;
+  max-width: 280px;
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+}
+
+.social {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(232, 235, 248, 0.6);
+  transition: color 0.2s, background 0.2s, transform 0.2s;
+}
+
+.social:hover {
+  color: var(--color-accent);
+  background: rgba(255, 107, 43, 0.1);
+  transform: scale(1.1);
+}
+
+.colTitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(232, 235, 248, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.navItem {
+  font-size: 0.88rem;
+  color: rgba(232, 235, 248, 0.6);
+  transition: color 0.2s;
+}
+
+.navItem:hover {
+  color: var(--color-accent);
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: rgba(232, 235, 248, 0.6);
+  line-height: 1.5;
+}
+
+.contactItem svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: rgba(232, 235, 248, 0.4);
+}
+
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+}
+
+.bottom .container {
+  display: block;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 0.8rem;
+  color: rgba(232, 235, 248, 0.4);
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}

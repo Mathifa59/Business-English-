@@ -1,0 +1,237 @@
+/* ── Hero ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 72px;
+}
+
+.heroInner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heroBadge {
+  display: inline-flex;
+  align-self: flex-start;
+  background: rgba(255, 107, 43, 0.18);
+  border: 1px solid rgba(255, 107, 43, 0.35);
+  color: #FF8F5E;
+  border-radius: var(--radius-pill);
+  padding: 6px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.heroTitle {
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.heroHighlight {
+  color: var(--color-accent);
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-on-dark-muted);
+  line-height: 1.7;
+  max-width: 480px;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.heroActions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.4s both;
+}
+
+.heroStats {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 0.82rem;
+  color: var(--color-text-on-dark-muted);
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.5s both;
+}
+
+.heroStatDivider {
+  width: 1px;
+  height: 14px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.heroImage {
+  display: flex;
+  justify-content: flex-end;
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s both;
+}
+
+.heroImgPlaceholder {
+  width: 100%;
+  max-width: 480px;
+  aspect-ratio: 580 / 620;
+  background: linear-gradient(135deg, #1A2A5E, #2A3F80);
+  border-radius: 20px;
+  box-shadow: 0 32px 80px rgba(26, 63, 170, 0.45);
+  display: flex;
+  align-items: flex-end;
+  padding: 24px;
+}
+
+.heroImgLabel {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.35);
+  font-weight: 500;
+}
+
+/* ── Section backgrounds ── */
+.sectionWhite { background: var(--color-bg); }
+.sectionSoft  { background: var(--color-bg-soft); }
+.sectionDark  { background: var(--color-bg-dark); }
+
+/* ── Why grid ── */
+.whyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.whyCard {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card-lg);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.whyCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(26, 63, 170, 0.10);
+}
+
+.whyIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--color-bg-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whyCardTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.whyCardDesc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* ── Courses grid ── */
+.coursesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.seeAll {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ── Stats ── */
+.statsHeader {
+  margin-bottom: 16px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ── Testimonials ── */
+.testimonialsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .whyGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+    padding: 60px 24px 80px;
+  }
+
+  .heroBadge {
+    align-self: center;
+  }
+
+  .heroSubtitle {
+    max-width: 100%;
+  }
+
+  .heroActions {
+    justify-content: center;
+  }
+
+  .heroStats {
+    justify-content: center;
+  }
+
+  .heroImage {
+    justify-content: center;
+  }
+
+  .whyGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .coursesGrid,
+  .statsGrid,
+  .testimonialsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .coursesGrid,
+  .testimonialsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

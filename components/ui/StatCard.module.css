@@ -1,0 +1,21 @@
+.card {
+  text-align: center;
+  padding: 40px 32px;
+}
+
+.number {
+  font-family: var(--font-title), system-ui, sans-serif;
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+  margin-bottom: 12px;
+  letter-spacing: -0.02em;
+}
+
+.label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-on-dark-muted);
+  letter-spacing: 0.02em;
+}

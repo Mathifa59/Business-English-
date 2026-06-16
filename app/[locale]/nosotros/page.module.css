@@ -1,0 +1,195 @@
+.hero {
+  padding-top: 72px;
+}
+
+.heroInner {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 100px 24px 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.heroTitle {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+.heroSubtitle {
+  font-size: 1.05rem;
+  color: var(--color-text-on-dark-muted);
+  line-height: 1.65;
+  animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s both;
+}
+
+.sectionWhite { background: var(--color-bg); }
+.sectionSoft  { background: var(--color-bg-soft); }
+
+/* ── Director ── */
+.directorGrid {
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.directorImgWrap {
+  display: flex;
+}
+
+.directorImg {
+  width: 100%;
+  aspect-ratio: 400 / 480;
+  background: linear-gradient(135deg, #1A2A5E, #2A3F80);
+  border-radius: 16px;
+  box-shadow: 0 24px 64px rgba(26, 63, 170, 0.30);
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+}
+
+.directorImgLabel {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.directorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+}
+
+.directorName {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}
+
+.directorBio {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+.credentials {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.credential {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.credential svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* ── Mission / Vision ── */
+.mvGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.mvCard {
+  background: #fff;
+  border: 1px solid rgba(26, 63, 170, 0.12);
+  border-radius: var(--radius-card-lg);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mvIcon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: rgba(26, 63, 170, 0.07);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mvTitle {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+.mvText {
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ── Pillars ── */
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.pillar {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 32px 0;
+  border-top: 2px solid var(--color-border);
+  position: relative;
+}
+
+.pillarNumber {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  opacity: 0.9;
+}
+
+.pillarTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.pillarDesc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .directorGrid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .mvGrid,
+  .pillarsGrid {
+    grid-template-columns: 1fr;
+  }
+}
