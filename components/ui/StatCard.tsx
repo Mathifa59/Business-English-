@@ -29,13 +29,13 @@ export default function StatCard({ number, suffix, label }: StatCardProps) {
           const duration = 1200;
           const startTime = performance.now();
 
-          function tick(now: number) {
+          const tick = (now: number) => {
             const elapsed = now - startTime;
             const progress = Math.min(elapsed / duration, 1);
             const eased = easeOutQuart(progress);
             setCount(Math.round(eased * number));
             if (progress < 1) requestAnimationFrame(tick);
-          }
+          };
 
           requestAnimationFrame(tick);
           observer.unobserve(el);
